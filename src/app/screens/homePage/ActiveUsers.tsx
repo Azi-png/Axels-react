@@ -20,21 +20,26 @@ export default function ActiveUsers() {
           <Stack className="cards-frame">
             <CssVarsProvider>
               {activeUsers.length !== 0 ? (
-                // Bu yerda foydalanuvchilar chiqariladi
-                activeUsers.map((user, index) => (
-                  <Card key={index} className="card">
-                    <CardOverflow>
-                      <AspectRatio ratio="1">
-                        <img src={user.memberImage} alt={user.memberNick} />
-                      </AspectRatio>
-                    </CardOverflow>
-                    <Typography className="member-nickname">
-                      {user.memberNick}
-                    </Typography>
-                  </Card>
-                ))
+                activeUsers.map((ele, index) => {
+                  return (
+                    <Card key={index} variant="outlined" className="card">
+                      <CardOverflow>
+                        <AspectRatio ratio="1">
+                          <img src={ele.memberImage} alt={ele.memberNick} />
+                        </AspectRatio>
+                      </CardOverflow>
+                      <CardOverflow className="member-nickname">
+                        <Stack>
+                          <Stack flexDirection="row">
+                            <Typography>{ele.memberNick}</Typography>
+                          </Stack>
+                        </Stack>
+                      </CardOverflow>
+                    </Card>
+                  );
+                })
               ) : (
-                <Box className="no-data">No Active Users!</Box>
+                <Box className="no-data">New Active Users!</Box>
               )}
             </CssVarsProvider>
           </Stack>
