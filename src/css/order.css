@@ -220,14 +220,19 @@
   height: 47px;
   margin-top: 5px;
   margin-left: 50px;
+  margin-bottom: 5px;
 }
 
 .order-page .order-box-scroll .orders-name-price .order-dish-img,
 .orders-name-price .order-dish-img {
+  width: 49px;
+  height: 46px;
   width: 50px;
-  height: 47px;
+
   border-radius: 29px;
   background-size: cover;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .order-page .order-box-scroll .orders-name-price .title-dish,
@@ -271,8 +276,7 @@
 }
 
 /* === TOTAL PRICE BOX === */
-.order-page .order-main-content .order-main-box .total-price-box,
-.total-price-box {
+.order-page .order-main-content .order-main-box .total-price-box {
   position: relative;
   display: flex;
   flex-direction: row;
