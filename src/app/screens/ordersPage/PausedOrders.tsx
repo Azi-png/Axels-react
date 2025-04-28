@@ -9,7 +9,7 @@ export default function PausedOrders() {
       <Stack>
         {[1, 2].map((ele, index) => {
           return (
-            <Box key={index} className={"order-main-box"}>
+            <Box key={index} className={"orde-main-box"}>
               <Box className={"order-box-scroll"}>
                 {[1, 2, 3].map((ele2, index2) => {
                   return (
@@ -55,6 +55,14 @@ export default function PausedOrders() {
             </Box>
           );
         })}
+        {false && (
+          <Box display={"flex"} flexDirection={"row"} justifyContent={"center"}>
+            <img
+              src={"/icons/noimage-list.svg"}
+              style={{ width: 300, height: 300 }}
+            />
+          </Box>
+        )}
       </Stack>
     </TabPanel>
   );
