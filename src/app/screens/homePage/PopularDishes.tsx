@@ -86,7 +86,7 @@ export default function PopularDishes() {
                           startDecorator={<DescriptionOutlinedIcon />}
                           textColor="neutral.300"
                         >
-                          ${ele.productDesc}
+                          {ele.productDesc}
                         </Typography>
                       </CardOverflow>
                     </Card>
