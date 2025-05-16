@@ -1,30 +1,26 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { HomePageState } from "../../lib/types/screen";
+import axios from "axios";
+import { serverApi } from "../../lib/config";
+import { Member } from "../../lib/types/member";
 
-const initialState: HomePageState = {
-  popularDishes: [],
-  newDishes: [],
-  topUsers: [],
-};
+class MemberService {
+  private readonly path: string;
 
-const homePageSlice = createSlice({
-  name: "homePage",
-  initialState,
-  reducers: {
-    setPopularDishes: (state, action) => {
-      state.popularDishes = action.payload;
-    },
-    setNewDishes: (state, action) => {
-      state.newDishes = action.payload;
-    },
-    setTopUsers: (state, action) => {
-      state.topUsers = action.payload;
-    },
-  },
-});
+  constructor() {
+    this.path = serverApi;
+  }
 
-export const { setPopularDishes, setNewDishes, setTopUsers } =
-  homePageSlice.actions;
+  public async getTopUsers(): Promise<Member[]> {
+    try {
+      const url = this.path + "/member/top-users";
+      const result = await axios.get(url);
+      console.log("getTopUsers:", result);
 
-const HomePageReducer = homePageSlice.reducer;
-export default HomePageReducer;
+      return result.data;
+    } catch (err) {
+      console.log("Error, getTopUsers:", err);
+      throw err;
+    }
+  }
+}
+
+export default MemberService;

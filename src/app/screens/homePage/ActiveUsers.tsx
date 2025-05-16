@@ -29,13 +29,14 @@ export default function ActiveUsers() {
                 topUsers.map((member: Member) => {
                   const imagePath = `${serverApi}/${member.memberImage}`;
                   return (
-                    <Card key={member._id} variant="outlined" className="card">
+                    <Card
+                      key={member._id}
+                      variant="outlined"
+                      className={"card"}
+                    >
                       <CardOverflow>
                         <AspectRatio ratio="1">
-                          <img
-                            src={member.memberImage}
-                            alt={member.memberNick}
-                          />
+                          <img src={imagePath} alt={member.memberNick} />
                         </AspectRatio>
                       </CardOverflow>
                       <CardOverflow className="member-nickname">
