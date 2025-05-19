@@ -24,10 +24,9 @@ const actionDispatch = (dispatch: Dispatch) => ({
 
 export default function HomePage() {
   const { setPopularDishes, setNewDishes, setTopUsers } = actionDispatch(
-    useDispatch()
+    //2.keyin actionDispatch f call qilinadi, u objectni qaytaradi objectni ichida 3 ta funksiya bb, ularni useEffectni ichida foydalanish un destruct qilyamiz.
+    useDispatch() //birinchi useDispatch ishga tushadi, reduxdan dispatch funksiyasini qaytaradi. 20-qatordagi.
   );
-
-  console.log(process.env.REACT_APP_API_URL);
 
   useEffect(() => {
     // Backend server data fetch => Data
@@ -40,7 +39,7 @@ export default function HomePage() {
         productCollection: ProductCollection.DISH,
       })
       .then((data) => {
-        setPopularDishes(data);
+        setPopularDishes(data); //3-qadamda shu qator ishga tushadi.
       })
       .catch((err) => console.log(err));
 
