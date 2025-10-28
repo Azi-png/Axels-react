@@ -160,7 +160,18 @@ export function Settings() {
         </div>
       </Box>
       <Box className={"save-box"}>
-        <Button variant={"contained"} onClick={handleSubmitButton}>
+        <Button
+          sx={{
+            backgroundColor: "black", // fon qora
+            color: "white", // matn oq
+            borderRadius: 0, // radius yo'q
+            "&:hover": {
+              backgroundColor: "#c4a57b", // hover rang
+            },
+          }}
+          variant={"contained"}
+          onClick={handleSubmitButton}
+        >
           Save
         </Button>
       </Box>

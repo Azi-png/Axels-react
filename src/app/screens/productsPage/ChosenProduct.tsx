@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Stack, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
@@ -25,6 +25,7 @@ import { serverApi } from "../../../lib/config";
 import { CartItem } from "../../../lib/types/search";
 
 /** REDUX SLICE & SELECTOR */
+
 const actionDispatch = (dispatch: Dispatch) => ({
   setRestaurant: (data: Member) => dispatch(setRestaurant(data)),
   setChosenProduct: (data: Product) => dispatch(setChosenProduct(data)),
@@ -48,6 +49,8 @@ interface ChosenProductProps {
 }
 
 export default function ChosenProduct(props: ChosenProductProps) {
+  const [descOpen, setDescOpen] = useState(false);
+  const [sizeGuideOpen, setSizeGuideOpen] = useState(false);
   const { onAdd } = props;
 
   const { productId } = useParams<{ productId: string }>();
@@ -70,9 +73,17 @@ export default function ChosenProduct(props: ChosenProductProps) {
   }, []);
   if (!chosenProduct || !restaurant) return null;
 
+  const toggleDesc = () => setDescOpen(!descOpen);
+  const toggleSizeGuide = () => setSizeGuideOpen(!sizeGuideOpen);
+
   return (
     <div className={"chosen-product"}>
-      <Box className={"title"}>Product Detail</Box>
+      <Box
+        className="title"
+        sx={{ display: "flex", justifyContent: "flex-start" }}
+      >
+        <span>Product details</span>
+      </Box>
       <Container className={"product-container"}>
         <Stack className={"chosen-product-slider"}>
           <Swiper
@@ -101,7 +112,22 @@ export default function ChosenProduct(props: ChosenProductProps) {
             <span className={"resto-name"}>{restaurant.memberNick}</span>
             <span className={"resto-name"}>{restaurant.memberPhone}</span>
             <Box className={"rating-box"}>
-              <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+              <Rating
+                name="half-rating"
+                defaultValue={2.5}
+                precision={0.5}
+                sx={{
+                  "& .MuiRating-iconFilled": {
+                    color: "black", // To'ldirilgan yulduzlar qora
+                  },
+                  "& .MuiRating-iconEmpty": {
+                    color: "black", // Bo'sh yulduzlar qora
+                  },
+                  "& .MuiRating-iconHover": {
+                    color: "black", // Hover holatidagi yulduzlar qora
+                  },
+                }}
+              />
               <div className={"evaluation-box"}>
                 <div className={"product-view"}>
                   <RemoveRedEyeIcon sx={{ mr: "10px" }} />
@@ -119,26 +145,26 @@ export default function ChosenProduct(props: ChosenProductProps) {
               <span>Price:</span>
               <span>${chosenProduct?.productPrice}</span>
             </div>
-            <div className={"button-box"}>
-              <Button
-                variant="contained"
-                onClick={(e) => {
-                  onAdd({
-                    _id: chosenProduct._id,
-                    quantity: 1,
-                    name: chosenProduct.productName,
-                    price: chosenProduct.productPrice,
-                    image: chosenProduct.productImages[0],
-                  });
-                  e.stopPropagation();
-                }}
-              >
-                Add To Basket
-              </Button>
-            </div>
+
+            <Button
+              variant="contained"
+              onClick={(e) => {
+                onAdd({
+                  _id: chosenProduct._id,
+                  quantity: 1,
+                  name: chosenProduct.productName,
+                  price: chosenProduct.productPrice,
+                  image: chosenProduct.productImages[0],
+                });
+                e.stopPropagation();
+              }}
+            >
+              Add To Basket
+            </Button>
           </Box>
         </Stack>
       </Container>
+      {/* Collapsible bo'limlar: */}
     </div>
   );
 }

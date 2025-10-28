@@ -7,24 +7,74 @@ export default function Statistics() {
     <div className="static-frame">
       <Container>
         <Stack className="info">
-          <Stack className="static-box">
-            <Box className="static-num">12</Box>
-            <Box className="static-text">Restaurants</Box>
+          <Stack className="static-box" sx={{ marginRight: "20px" }}>
+            <Box className="static-num" sx={{ marginBottom: "15px" }}>
+              <img src="/icons/diamond-icon.svg" alt="" />
+            </Box>
+            <Stack direction="column" sx={{ marginTop: "30px" }}>
+              <Box className="static-text-1">Certified</Box>
+              <Box
+                className="static-text"
+                sx={{
+                  width: 266,
+                  height: 20,
+                }}
+              >
+                Available certificates of authenticity
+              </Box>
+            </Stack>
           </Stack>
-          <Divider height="64" width="2" bg="#E3C08D" />
-          <Stack className="static-box">
-            <Box className="static-num">8</Box>
-            <Box className="static-text">Experience</Box>
+
+          <Stack className="static-box" sx={{ marginRight: "20px" }}>
+            <Box className="static-num" sx={{ marginBottom: "15px" }}>
+              <img src="/icons/Secure-Icon.svg" alt="" />
+            </Box>
+            <Stack direction="column" sx={{ marginTop: "30px" }}>
+              <Box className="static-text-1">Secure</Box>
+              <Box
+                className="static-text"
+                sx={{
+                  width: 266,
+                  height: 24,
+                }}
+              >
+                Certified marketplace since 2017
+              </Box>
+            </Stack>
           </Stack>
-          <Divider height="64" width="2" bg="#E3C08D" />
-          <Stack className="static-box">
-            <Box className="static-num">50+</Box>
-            <Box className="static-text">Menu</Box>
+          <Stack className="static-box" sx={{ marginRight: "20px" }}>
+            <Box className="static-num" sx={{ marginBottom: "15px" }}>
+              <img src="/icons/Delivery-Icon.svg" alt="" />
+            </Box>
+            <Stack direction="column" sx={{ marginTop: "30px" }}>
+              <Box className="static-text-1">Shipping</Box>
+              <Box
+                className="static-text"
+                sx={{
+                  width: 266,
+                  height: 24,
+                }}
+              >
+                Free, fast, and reliable worldwide
+              </Box>
+            </Stack>
           </Stack>
-          <Divider height="64" width="2" bg="#E3C08D" />
-          <Stack className="static-box">
-            <Box className="static-num">200+</Box>
-            <Box className="static-text">Clients</Box>
+          <Stack className="static-box" sx={{ marginRight: "15px" }}>
+            <Box className="static-num" sx={{ marginBottom: "15px" }}>
+              <img src="/icons/Package-Icon.svg" alt="" />
+            </Box>
+            <Stack direction="column" sx={{ marginTop: "30px" }}>
+              <Box className="static-text-1">Transparent</Box>
+              <Box
+                className="static-text"
+                sx={{
+                  width: 266,
+                  height: 24,
+                }}
+              >
+                Hassle-free return policy
+              </Box>
+            </Stack>
           </Stack>
         </Stack>
       </Container>

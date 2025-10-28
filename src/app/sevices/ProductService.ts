@@ -1,6 +1,10 @@
 import axios from "axios";
 import { serverApi } from "../../lib/config";
-import { Product, ProductInquiry } from "../../lib/types/product";
+import {
+  Product,
+  ProductInquiry,
+  ProductListResponse,
+} from "../../lib/types/product";
 
 class ProductService {
   private readonly path: string;
@@ -9,12 +13,17 @@ class ProductService {
     this.path = serverApi;
   }
 
-  public async getProducts(input: ProductInquiry): Promise<Product[]> {
+  public async getProducts(
+    input: ProductInquiry
+  ): Promise<ProductListResponse> {
     try {
       let url = `${this.path}/product/all?order=${input.order}&page=${input.page}&limit=${input.limit}`;
       if (input.productCollection)
         url += `&productCollection=${input.productCollection}`;
       if (input.search) url += `&search=${input.search}`;
+      if (input.minPrice !== undefined) url += `&minPrice=${input.minPrice}`;
+      if (input.maxPrice !== undefined) url += `&maxPrice=${input.maxPrice}`;
+      if (input.material) url += `&material=${input.material}`;
 
       const result = await axios.get(url);
       console.log("getProducts:", result);

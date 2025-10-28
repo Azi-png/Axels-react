@@ -110,7 +110,18 @@ export default function HelpPage() {
                         justifyContent={"flex-end"}
                         sx={{ mt: "30px" }}
                       >
-                        <Button type={"submit"} variant="contained">
+                        <Button
+                          sx={{
+                            backgroundColor: "black", // fon qora
+                            color: "white", // matn oq
+                            borderRadius: 0, // radius yo'q
+                            "&:hover": {
+                              backgroundColor: "#c4a57b", // hover rang
+                            },
+                          }}
+                          type={"submit"}
+                          variant="contained"
+                        >
                           Send
                         </Button>
                       </Box>

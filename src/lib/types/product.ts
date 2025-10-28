@@ -25,4 +25,18 @@ export interface ProductInquiry {
   limit: number;
   productCollection?: ProductCollection;
   search?: string;
+
+  // Yangi qo‘shimcha maydonlar
+  minPrice?: number;
+  maxPrice?: number;
+  material?: string;
+  brand?: string;
+  size?: string;
+}
+
+export interface ProductListResponse {
+  products: Product[];
+  minPrice: number;
+  maxPrice: number;
+  totalCount: number;
 }

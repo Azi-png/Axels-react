@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import Statistics from "./Statistics";
-import PopularDishes from "./PopularDishes";
-import NewDishes from "./NewDishes";
+import PopularProducts from "./PopularProducts";
+import NewProducts from "./NewProducts";
 import Advertisement from "./Advertisement";
 import ActiveUsers from "./ActiveUsers";
 import Events from "./Events";
 import { useDispatch } from "react-redux";
 import { Dispatch } from "@reduxjs/toolkit";
-import { setNewDishes, setPopularDishes, setTopUsers } from "./slice";
+import { setNewProducts, setPopularProducts, setTopUsers } from "./slice";
 import { Product } from "../../../lib/types/product";
 import ProductService from "../../sevices/ProductService";
 import { ProductCollection } from "../../../lib/enums/product.enum";
@@ -17,13 +17,13 @@ import MemberService from "../../sevices/MemberService";
 
 /** REDUX SLICE & SELECTOR */
 const actionDispatch = (dispatch: Dispatch) => ({
-  setPopularDishes: (data: Product[]) => dispatch(setPopularDishes(data)),
-  setNewDishes: (data: Product[]) => dispatch(setNewDishes(data)),
+  setPopularProducts: (data: Product[]) => dispatch(setPopularProducts(data)),
+  setNewProducts: (data: Product[]) => dispatch(setNewProducts(data)),
   setTopUsers: (data: Member[]) => dispatch(setTopUsers(data)),
 });
 
 export default function HomePage() {
-  const { setPopularDishes, setNewDishes, setTopUsers } = actionDispatch(
+  const { setPopularProducts, setNewProducts, setTopUsers } = actionDispatch(
     //2.keyin actionDispatch f call qilinadi, u objectni qaytaradi objectni ichida 3 ta funksiya bb, ularni useEffectni ichida foydalanish un destruct qilyamiz.
     useDispatch() //birinchi useDispatch ishga tushadi, reduxdan dispatch funksiyasini qaytaradi. 20-qatordagi.
   );
@@ -36,10 +36,10 @@ export default function HomePage() {
         page: 1,
         limit: 4,
         order: "productViews",
-        productCollection: ProductCollection.DISH,
+        productCollection: ProductCollection.RING,
       })
       .then((data) => {
-        setPopularDishes(data); //3-qadamda shu qator ishga tushadi.
+        setPopularProducts(data.products); //3-qadamda shu qator ishga tushadi.
       })
       .catch((err) => console.log(err));
 
@@ -51,7 +51,7 @@ export default function HomePage() {
         // productCollection: ProductCollection.DISH,
       })
       .then((data) => {
-        setNewDishes(data);
+        setNewProducts(data.products);
       })
       .catch((err) => console.log(err));
 
@@ -65,8 +65,8 @@ export default function HomePage() {
   return (
     <div className="homepage">
       <Statistics />
-      <PopularDishes />
-      <NewDishes />
+      <PopularProducts />
+      <NewProducts />
       <Advertisement />
       <ActiveUsers />
       <Events />

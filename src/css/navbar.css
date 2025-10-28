@@ -1,8 +1,10 @@
 .home-navbar {
   width: 100%;
-  height: 773px;
+  height: 1000px;
   display: flex;
-  background: url("/public/img/banner.webp");
+  /* background: url("/public/img/banner.webp"); */
+  background: url("/public/img/haha.png");
+
   background-size: cover;
 }
 
@@ -32,8 +34,12 @@
 }
 
 .home-navbar .navbar-container .menu .links .login-button {
-  background: #3776cc;
+  /* background: #3776cc; */
   color: #f8f8ff;
+  background: transparent;
+  background: none; /* orqa fon yo‘q */
+  border: none; /* border yo‘q */
+  box-shadow: none;
 }
 .home-navbar .navbar-container .menu .user-avatar {
   width: 50px;
@@ -79,21 +85,32 @@
 }
 
 .home-navbar .navbar-container .header-frame .detail {
+  margin-top: 160px;
   width: 510px;
   display: flex;
   flex-direction: column;
 }
 
 .home-navbar .navbar-container .header-frame .detail .head-main-txt {
-  width: 450px;
-  height: 150px;
-  font-family: "Roboto Serif";
+  /* width: 450px;
+  height: 150px; */
+  width: 1307px;
+  height: 240px;
+  color: var(--Cream, #faf9f7);
+  text-align: center;
+  /* Heading 1 */
+  font-family: "Playfair Display";
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120px; /* 85.714% */
+  /* font-family: "Roboto Serif";
   font-size: 50px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.75px;
-  color: #f8f8ff;
+  color: black; */
 }
 
 .home-navbar .navbar-container .header-frame .detail .wel-txt {
@@ -105,11 +122,11 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.54px;
-  color: #d7b680;
+  color: black;
 }
 
 .home-navbar .navbar-container .header-frame .detail .service-txt {
-  margin-top: 23px;
+  /* margin-top: 23px;
   width: 153px;
   height: 23px;
   font-family: "Roboto Serif";
@@ -118,7 +135,19 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.3px;
-  color: #d5d5d5;
+  color: black; */
+  width: 706px;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  /* Paragraph */
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+  margin-left: 300px;
+  margin-top: 30px;
 }
 
 .home-navbar .navbar-container .detail .signup {
@@ -129,14 +158,20 @@
   width: 210px;
   height: 60px;
   border-radius: 4px;
-  background: #1976d2;
+  /* background: #d8c29d; */
+  background-color: transparent; /* Oq rang, 30% shaffofliq */
+  /* backdrop-filter: blur(10px);  */
+  border: 1px solid white;
+  padding: 12px 24px;
+  margin-left: 525px;
+  text-align: center;
   text-align: center;
   font-family: Poppins;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: #f8f8ff;
+  color: white;
 }
 .home-navbar .navbar-container .logo-frame {
   margin-top: 43px;
@@ -147,7 +182,7 @@
 .home-navbar .navbar-container .logo-frame .logo-img {
   width: 100%;
   height: 100%;
-  background: url("/public/img/logo.webp");
+  /* background: url("/public/img/logo.webp"); */
   background-size: contain;
   background-repeat: no-repeat;
   filter: invert(25%);
@@ -155,9 +190,10 @@
 
 .other-navbar {
   width: 100%;
-  height: 400px;
+  height: 150px;
   display: flex;
-  background: url("/public/img/banner.webp");
+  background-color: white;
+  /* background: url("/public/img/banner.webp"); */
   background-size: cover;
 }
 
@@ -186,9 +222,12 @@
 }
 
 .other-navbar .navbar-container .menu .links .login-button {
-  background: #3776cc;
+  background-color: red;
   color: #f8f8ff;
+  background: transparent;
+  border: none;
 }
+
 .other-navbar .navbar-container .menu .user-avatar {
   width: 50px;
   height: 50px;
@@ -200,7 +239,8 @@
 }
 
 .other-navbar .hover-line a {
-  color: #f8f8ff;
+  /* color: #f8f8ff; */
+  color: black;
   z-index: 100;
 }
 
@@ -231,10 +271,10 @@
   position: relative;
   padding: 10px 4px 0px 4px;
   width: 450px;
-  height: auto;
+  height: 700px;
   display: flex;
   flex-direction: column;
-  background: #f8f8ff;
+  background: white;
   border-radius: 16px;
 }
 
@@ -245,10 +285,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #d7b586;
-  border-width: 1px 0px;
+  /* background: #d7b586; */
+  /* border-width: 1px 0px;
   border-style: solid;
-  border-color: #343434;
+  border-color: #343434; */
 }
 
 .basket-frame .basket-info-box {
@@ -262,10 +302,10 @@
 }
 
 .basket-info-box .product-img {
-  width: 60px;
-  height: 60px;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 29px;
+  width: 250px;
+  height: 280px;
+  /* filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25)); */
+  /* border-radius: 29px; */
 }
 
 .basket-info-box .product-name {
@@ -280,13 +320,14 @@
 }
 
 .basket-info-box .product-price {
-  width: 80px;
+  width: 120px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
-  color: #ae0000;
+  color: gray;
+  margin-left: 40px;
 }
 
 .basket-info-box
@@ -308,23 +349,26 @@
 .basket-frame .basket-order {
   margin-top: 10px;
   width: 100%;
-  height: 64px;
+  height: 200px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .basket-order .price {
-  width: 200px;
+  width: 500px;
   display: flex;
+  justify-content: flex-end;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: #000000;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 .basket-frame .orders-wrapper {
@@ -335,6 +379,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  /* background-color: aqua; */
 }
 
 .basket-frame .orders-wrapper::-webkit-scrollbar {
@@ -343,7 +388,7 @@
 
 .basket-frame .orders-wrapper::-webkit-scrollbar-thumb {
   background-color: #888;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .basket-frame .orders-wrapper::-webkit-scrollbar-track {
@@ -355,7 +400,7 @@
   overflow: hidden;
   margin-top: 10px;
   width: 100%;
-  height: 260px;
+  height: 800px;
   display: flex;
   flex-direction: column;
 }

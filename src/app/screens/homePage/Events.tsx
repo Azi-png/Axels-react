@@ -43,14 +43,14 @@ export default function Events() {
                       <div className={"event-title-speaker"}>
                         <strong>{value.title}</strong>
                         <div className={"event-organizator"}>
-                          <img src={"/icons/speaker.svg"} />
+                          {/* <img src={"/img/item1.png"} /> */}
                           <p className={"spec-text-author"}>{value.author}</p>
                         </div>
                       </div>
 
                       <p className={"text-desc"}> {value.desc} </p>
 
-                      <div className={"bott-info"}>
+                      {/* <div className={"bott-info"}>
                         <div className={"bott-info-main"}>
                           <img src={"/icons/calendar.svg"} />
                           {value.date}
@@ -59,7 +59,7 @@ export default function Events() {
                           <img src={"/icons/location.svg"} />
                           {value.location}
                         </div>
-                      </div>
+                      </div> */}
                     </Box>
                   </Box>
                 </Box>
@@ -67,6 +67,7 @@ export default function Events() {
             );
           })}
         </Swiper>
+
         <Box className={"prev-next-frame"}>
           <img
             src={"/icons/arrow-right.svg"}

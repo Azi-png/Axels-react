@@ -2,7 +2,9 @@
   position: relative;
   width: 100%;
   height: auto;
-  background: #f8f8ff;
+
+  /* background: #f8f8ff; */
+  background-color: white;
 }
 
 /** Products **/
@@ -10,9 +12,10 @@
 .products-page .products {
   width: 100%;
   height: auto;
-  background: #f8f8ff;
+  background-color: white;
   display: flex;
   flex-direction: column;
+  margin-top: 2px;
 }
 
 .products-page .products .avatar-big-box {
@@ -22,6 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 
 .products-page .products .top-text {
@@ -46,7 +50,7 @@
   color: #343434;
 }
 
-.products-page .products .single-search-form {
+/* .products-page .products .single-search-form {
   position: relative;
   width: 30%;
   display: flex;
@@ -57,9 +61,9 @@
   border: 1px solid #fff;
   background: #fffcfc;
   box-shadow: 0px 4px 4px 0px rgba(212, 212, 212, 0.25);
-}
+} */
 
-.products-page .products .single-search-input {
+/* .products-page .products .single-search-input {
   position: relative;
   width: 225px;
   height: 30px;
@@ -74,10 +78,10 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 26px;
-  color: #4f547b;
-}
+  color: red;
+} */
 
-.products-page .products .single-button-search {
+/* .products-page .products .single-button-search {
   position: relative;
   width: 100px;
   height: 33px;
@@ -85,7 +89,7 @@
   display: flex;
   border-radius: 18px;
   background: #343434;
-}
+} */
 
 .products-page .products .prev-btn,
 .products .next-btn {
@@ -127,7 +131,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  color: #fffcfc;
+  color: white;
 }
 
 .products .product-wrapper {
@@ -153,14 +157,25 @@
   color: #e3c08d;
 }
 
-.products-page .products .product-card {
+/* .products-page .products .product-card {
   margin-top: 40px;
   margin-right: 24px;
   width: 270px;
-  height: auto;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: transparent;
+} */
+.products-page .products .product-card {
+  margin-top: 40px;
+  margin-right: 24px;
+  width: 320px; /* kenglikni oshirdim */
+  height: 480px; /* balandlikni oshirdim */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
 }
 
 .products-page .products .product-desc .product-title {
@@ -170,6 +185,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
+  color: #d7b586;
 }
 
 .products-page .products .product-card .product-img {
@@ -293,9 +309,11 @@
   position: relative;
   width: 100%;
   margin-top: 30px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .products-page .products .brands-logo {
   margin-top: 60px;
@@ -415,22 +433,24 @@
   color: #343434;
 }
 
-.products-page .products .dishes-filter-section {
+.products-page .products .products-filter-section {
   margin-top: 65px;
+  background-color: #d76b66;
   width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.products-page .products .dishes-filter-box {
+.products-page .products .products-filter-box {
+  background-color: #d7b586;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.dishes-filter-box .order {
+.products-filter-box .order {
   margin-right: 10px;
   border-radius: 12px;
   padding: 6px 20px;
@@ -447,29 +467,45 @@
 }
 .products .list-category-section .product-category {
   position: relative;
-  width: 36px;
+  width: 400px;
+  /* background-color: greenyellow; */
   height: auto;
   display: flex;
-  /* flex-direction: row; */
-  align-items: center;
-  flex-direction: column;
+  /* align-items: start; */
+  flex-direction: row;
+  margin-top: 10px;
+  /* flex-direction: center; */
+  justify-content: flex-start; /* chapga olib keladi */
 }
 
+/* .products-page .products .categ {
+  margin-right: 40px;
+} */
 .products-page .products .product-category .category-main {
-  margin-top: 260px;
+  /* background-color: yellow; */
+  /* margin-top: 40px; */
+  /* margin-top: 260px; */
   display: flex;
+  /* align-items: start; */
+  flex-direction: column;
+  width: 67px;
+  height: 250px;
+  margin-left: 10px;
+
   /* flex-direction: row; */
-  justify-content: end;
-  transform: rotate(-90deg); /* Standard CSS property */
-  -moz-transform: rotate(-90deg); /* Firefox */
-  -ms-transform: rotate(-90deg); /* IE */
-  -o-transform: rotate(-90deg); /* Opera */
-  -webkit-transform: rotate(-90deg); /* Safari and Chrome */
+  /* justify-content: end;
+  transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg); 
+  -o-transform: rotate(-90deg); 
+  -webkit-transform: rotate(-90deg); */
 }
 
 .products-page .products .product-category .category-main button {
-  min-width: auto;
-  margin-right: 10px;
+  /* min-width: auto; */
+  /* margin-right: 10px; */
+  margin-top: 5px;
+  width: 50px;
 }
 
 /* .products-page .products .css-1p7b7rs-MuiBadge-badge {
@@ -477,16 +513,20 @@
   top: 26%;
   right: 15%;
 } */
+
 /** ChosenProduct **/
 
 .products-page .chosen-product {
   position: relative;
   width: 100%;
   height: auto;
-  background: #f8f8ff;
+  /* background: #f8f8ff; */
+  background: white;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #343434;
 }
 
 .products-page .chosen-product .product-container {
@@ -497,13 +537,43 @@
   margin-bottom: 150px;
 }
 
+.products-page .chosen-product .product-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* quyuq kulrang matn */
+  margin-top: 10px;
+  padding: 0 10px;
+  white-space: pre-wrap; /* agar matnda yangi qatorlar bo‘lsa ko‘rsin */
+}
+
+.products-page .chosen-product .size-guide {
+  margin-top: 30px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9; /* engil kulrang fon */
+  border-radius: 6px;
+}
+
+.products-page .chosen-product .size-guide h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.products-page .chosen-product .size-guide p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+}
+
 .products-page .chosen-product .chosen-product-slider {
-  width: 48%;
-  height: 480px;
+  width: 40%;
+  height: 580px;
   background: #ffffff;
-  box-shadow: 9px 13px 14px 5px rgba(0, 0, 0, 0.25),
+  /* box-shadow: 9px 13px 14px 5px rgba(0, 0, 0, 0.25),
     inset -1px 2px 10px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
+  border-radius: 16px; */
   overflow: hidden;
 }
 
@@ -511,7 +581,7 @@
   --swiper-navigation-color: #fff;
   --swiper-pagination-color: #fff;
   width: 100%;
-  height: 1020px;
+  height: 1040px;
 }
 
 .products-page
@@ -520,7 +590,7 @@
   .swiper-area
   .slider-image {
   width: 100%;
-  height: 100%;
+  height: 700px;
 }
 
 .products-page .chosen-product .chosen-product-info {
@@ -529,9 +599,10 @@
   height: 480px;
   display: flex;
   background: #ffffff;
-  box-shadow: 9px 13px 14px 5px rgba(0, 0, 0, 0.25),
+
+  /* box-shadow: 9px 13px 14px 5px rgba(0, 0, 0, 0.25),
     inset -1px 2px 10px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
+  border-radius: 16px; */
 }
 
 .products-page .chosen-product .chosen-product-info .info-box {
@@ -542,12 +613,14 @@
 }
 
 .products-page .chosen-product .info-box .product-name {
-  font-family: "Poppins";
+  color: var(--Black, #222);
+  /* Heading 3 */
+  font-family: "Playfair Display";
+  font-size: 78px;
   font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 36px;
-  color: #000000;
+  font-weight: 400;
+  line-height: 56px; /* 116.667% */
+  margin-bottom: 40px;
 }
 
 .products-page .chosen-product .info-box .resto-name {
@@ -597,10 +670,10 @@
   margin-bottom: 30px;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: gray;
 }
 
 .products-page .chosen-product .info-box .product-price {
@@ -612,6 +685,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 45px;
 }
 
 .products-page .chosen-product .product-price span {
@@ -623,23 +697,41 @@
   color: #000000;
 }
 
-.products-page .chosen-product .button-box {
+/* .products-page .chosen-product .button-box {
   width: 100%;
-  height: auto;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  background-color: black;
+  transition: background-color 0.3s ease; 
+} */
 
-.products-page .chosen-product .button-box button {
-  width: 230px;
-  height: 44px;
+/* .products-page .chosen-product .button-box:hover {
+  background-color: #d8c29d;
+} */
+
+.products-page .chosen-product button {
+  font-family: "Poppins";
+  font-weight: 600; /* Biroz qalinroq */
+  letter-spacing: 0.1em; /* Harflar orasiga biroz bo'sh joy */
+  width: 550px;
+  height: 60px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
   color: #f8f8ff;
+  background-color: black;
+  border: none; /* Remove default border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  border-radius: 0%;
+}
+
+.products-page .chosen-product button:hover {
+  background-color: #b5956a;
 }
 
 .products-page .chosen-product .title {

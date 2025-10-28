@@ -11,8 +11,8 @@ const light = {
   palette: {
     type: "light",
     background: {
-      default: "#f8f8ff",
-      paper: common.white,
+      default: "#ffffff",
+      paper: "#ffffff",
     },
     primary: {
       contrastText: "#d7b586",

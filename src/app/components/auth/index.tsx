@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 const ModalImg = styled.img`
   width: 62%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 0;
   background: #000;
   margin-top: 9px;
   margin-left: 10px;
@@ -138,24 +138,58 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
             direction={"row"}
             sx={{ width: "800px" }}
           >
-            <ModalImg src={"/img/auth.webp"} alt="camera" />
+            <ModalImg src={"/img/item0.png"} alt="camera" />
             <Stack sx={{ marginLeft: "69px", alignItems: "center" }}>
               <h2>Signup Form</h2>
               <TextField
-                sx={{ marginTop: "7px" }}
+                sx={{
+                  marginTop: "7px",
+                  "& .MuiInputBase-input": {
+                    color: "gray", // input ichidagi yozuv rangi
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "gray", // label rangi
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "gray", // focus bo'lganda ham kulrang bo'lib qoladi
+                  },
+                }}
                 id="outlined-basic"
                 label="username"
                 variant="outlined"
                 onChange={handleUsername}
               />
               <TextField
-                sx={{ my: "17px" }}
+                sx={{
+                  my: "17px", // tepasi va pastidan 17px bo'sh joy
+                  "& .MuiInputBase-input": {
+                    color: "gray", // input ichidagi yozuv rangi
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "gray", // label rangi
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "gray", // focus bo'lganda ham kulrang bo'lib qoladi
+                  },
+                }}
                 id="outlined-basic"
                 label="phone number"
                 variant="outlined"
                 onChange={handlePhone}
               />
               <TextField
+                sx={{
+                  marginTop: "7px",
+                  "& .MuiInputBase-input": {
+                    color: "gray", // input ichidagi yozuv rangi
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "gray", // label rangi
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "gray", // focus bo'lganda ham kulrang bo'lib qoladi
+                  },
+                }}
                 id="outlined-basic"
                 label="password"
                 variant="outlined"
@@ -163,12 +197,21 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
                 onKeyDown={handlePasswordKeyDown}
               />
               <Fab
-                sx={{ marginTop: "30px", width: "120px" }}
+                sx={{
+                  borderRadius: 0, // burchaklarni yo'q qilish
+                  backgroundColor: "#000", // qora fon
+                  color: "#fff", // oq matn
+                  "&:hover": {
+                    backgroundColor: "#b5956a", // hover paytidagi rang
+                  },
+                  marginTop: "30px",
+                  width: "120px",
+                }}
                 variant="extended"
                 color="primary"
                 onChange={handleSignupRequest}
               >
-                <LoginIcon sx={{ mr: 1 }} />
+                {/* <LoginIcon sx={{ mr: 1 }} /> */}
                 Signup
               </Fab>
             </Stack>
@@ -194,7 +237,7 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
             direction={"row"}
             sx={{ width: "700px" }}
           >
-            <ModalImg src={"/img/auth.webp"} alt="camera" />
+            <ModalImg src={"/img/item.png"} alt="camera" />
             <Stack
               sx={{
                 marginLeft: "65px",
@@ -207,24 +250,43 @@ export default function AuthenticationModal(props: AuthenticationModalProps) {
                 id="outlined-basic"
                 label="username"
                 variant="outlined"
-                sx={{ my: "10px" }}
+                sx={{
+                  my: "10px",
+                  "& .MuiInputBase-input": { color: "gray" }, // input matni rangi
+                  "& .MuiInputLabel-root": { color: "gray" }, // label rangi
+                }}
                 onChange={handleUsername}
               />
+
               <TextField
-                id={"outlined-basic"}
-                label={"password"}
-                variant={"outlined"}
-                type={"password"}
+                id="outlined-basic"
+                label="password"
+                variant="outlined"
+                type="password"
+                sx={{
+                  "& .MuiInputBase-input": { color: "gray" },
+                  "& .MuiInputLabel-root": { color: "gray" },
+                }}
                 onChange={handlePassword}
                 onKeyDown={handlePasswordKeyDown}
               />
+
               <Fab
-                sx={{ marginTop: "27px", width: "120px" }}
+                sx={{
+                  borderRadius: 0,
+                  backgroundColor: "#000",
+                  color: "#fff",
+                  "&:hover": {
+                    backgroundColor: "#b5956a",
+                  },
+                  marginTop: "27px",
+                  width: "120px",
+                }}
                 variant={"extended"}
                 color={"primary"}
                 onClick={handleLoginRequest}
               >
-                <LoginIcon sx={{ mr: 1 }} />
+                {/* <LoginIcon sx={{ mr: 1 }} /> */}
                 Login
               </Fab>
             </Stack>

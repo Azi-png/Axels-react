@@ -50,7 +50,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/burak.svg" />
+              <img className="brand-logo" src="/icons/axelss.svg" />
             </NavLink>
           </Box>
           <Stack className="links">
@@ -96,9 +96,10 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                 <Button
                   variant="contained"
                   className="login-button"
+                  disableElevation
                   onClick={() => setLoginOpen(true)}
                 >
-                  Login
+                  <img src="/icons/user.svg" alt="" />
                 </Button>
               </Box>
             ) : (
@@ -151,7 +152,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
             >
               <MenuItem onClick={handleLogoutRequest}>
                 <ListItemIcon>
-                  <Logout fontSize="small" style={{ color: "blue" }} />
+                  <Logout fontSize="small" style={{ color: "black" }} />
                 </ListItemIcon>
                 Logout
               </MenuItem>

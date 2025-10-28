@@ -20,12 +20,12 @@ export default function Footer() {
         <Stack flexDirection={"row"} sx={{ mt: "94px" }}>
           <Stack flexDirection={"column"} style={{ width: "340px" }}>
             <Box>
-              <img width={"100px"} src={"/icons/burak.svg"} />
+              <img width={"100px"} src={"/icons/axels.svg"} />
             </Box>
             <Box className={"foot-desc-txt"}>
-              Focusing on the gourmet Turkish breakfast as well as the youth
-              society, CZN Burak Gurme aims to bring Turkish cuisine back. CZN
-              Burak Gurme creates an illusion with its cuisine.
+              "Discover timeless elegance with our handcrafted jewelry. Unique
+              designs, premium quality, and a touch of luxury made just for
+              you."
             </Box>
             <Box className="sns-context">
               <img src={"/icons/facebook.svg"} />
@@ -65,7 +65,7 @@ export default function Footer() {
                   </Box>
                   <Box className={"find-us"}>
                     <span>E.</span>
-                    <div>devexuz@gmail.com</div>
+                    <div>axelsuz@gmail.com</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>H.</span>
@@ -81,7 +81,7 @@ export default function Footer() {
           sx={{ mt: "80px" }}
         ></Stack>
         <Stack className={"copyright-txt"}>
-          © Copyright Devex Global, All rights reserved.
+          © Copyright Axels Global, All rights reserved.
         </Stack>
       </Container>
     </Footers>

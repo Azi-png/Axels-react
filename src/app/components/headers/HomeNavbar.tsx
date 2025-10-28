@@ -52,7 +52,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/burak.svg" />
+              <img className="brand-logo" src="/icons/axels.svg" />
             </NavLink>
           </Box>
           <Stack className="links">
@@ -102,7 +102,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                   className="login-button"
                   onClick={() => setLoginOpen(true)}
                 >
-                  Login
+                  <img src={"/icons/User-Icon.svg"} />
                 </Button>
               </Box>
             ) : (
@@ -155,7 +155,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
             >
               <MenuItem onClick={handleLogoutRequest}>
                 <ListItemIcon>
-                  <Logout fontSize="small" style={{ color: "blue" }} />
+                  <Logout fontSize="small" style={{ color: "black" }} />
                 </ListItemIcon>
                 Logout
               </MenuItem>
@@ -164,19 +164,28 @@ export default function HomeNavbar(props: HomeNavbarProps) {
         </Stack>
         <Stack className={"header-frame"}>
           <Box className={"detail"}>
-            <Box className={"head-main-txt"}>
-              World's Most Delicious Cousine
+            <Box className={"head-main-txt"}>DISCOVER SPARKLE WITH STYLE</Box>
+            {/* <Box className={"wel-txt"}>The Choice, not just a choice</Box> */}
+            <Box className={"service-txt"}>
+              Whether casual or formal, find the perfect jewelry for every
+              occasion with us.
             </Box>
-            <Box className={"wel-txt"}>The Choice, not just a choice</Box>
-            <Box className={"service-txt"}>24 hours service</Box>
             <Box className={"signup"}>
               {!authMember ? (
                 <Button
+                  sx={{
+                    borderRadius: 0, // burchaklarni yo'q qilish
+                    backgroundColor: "#000", // qora fon
+                    color: "#fff", // oq matn
+                    "&:hover": {
+                      backgroundColor: "#b5956a", // hover paytidagi rang
+                    },
+                  }}
                   variant={"contained"}
                   className={"signup-button"}
                   onClick={() => setSignupOpen(true)}
                 >
-                  SIGN UP
+                  SIGNUP
                 </Button>
               ) : null}
             </Box>

@@ -22,7 +22,7 @@ export default function ActiveUsers() {
     <div className="active-users-frame">
       <Container>
         <Stack className="main">
-          <Box className="category-title">Active Users</Box>
+          <Box className="category-title">Top Jewel Lovers</Box>
           <Stack className="cards-frame">
             <CssVarsProvider>
               {topUsers.length !== 0 ? (
@@ -35,7 +35,15 @@ export default function ActiveUsers() {
                       className={"card"}
                     >
                       <CardOverflow>
-                        <AspectRatio ratio="1">
+                        <AspectRatio
+                          sx={{
+                            borderRadius: 0, // barcha burchaklarni yo‘q qiladi
+                            "& img": {
+                              borderRadius: 0, // ichidagi rasm radiusini ham yo‘q qiladi
+                            },
+                          }}
+                          ratio="1"
+                        >
                           <img src={imagePath} alt={member.memberNick} />
                         </AspectRatio>
                       </CardOverflow>
